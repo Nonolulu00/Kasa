@@ -1,17 +1,19 @@
 .container {
-  margin: 0px 20px;
-  border: 1px solid blue;
+  margin: 45px 100px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  width: 100vw;
-  height: 70vh;
+  max-height: 800px;
   background-color: #f6f6f6;
+  overflow: scroll;
+  border-radius: 25px;
+  padding: 45px 46px;
+  gap: 60px;
   // @media (max-width: 768px) {
-  // 		padding: 0 10px;
+  //
   // }
   // @media (max-width: 576px) {
-  // 		padding: 0 5px;
+  //
   // }
 }

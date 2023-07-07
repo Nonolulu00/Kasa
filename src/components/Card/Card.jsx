@@ -1,12 +1,16 @@
 import PropTypes from "prop-types";
 import "./Card.scss";
+import "../../styles/typography.scss";
+import { Link } from "react-router-dom";
 
 export const Card = ({ image, text }) => {
   return (
-    <div className="card">
-      <img src={image}></img>
-      <h5 className="title">{text}</h5>
-    </div>
+    <Link>
+      <div className="card">
+        <img src={image}></img>
+        <h4 className="title">{text}</h4>
+      </div>
+    </Link>
   );
 };
 

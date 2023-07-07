@@ -6,7 +6,6 @@ export const Banner = ({ image, text }) => {
     <div className="banner">
       <img src={image}></img>
       <h1 className="headline">{text}</h1>
-      {/* modifier après rebase */}
     </div>
   );
 };

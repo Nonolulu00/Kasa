@@ -1,0 +1,24 @@
+header {
+  position: sticky;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 45px 100px;
+  height: 68px;
+  z-index: 100;
+  top: 0;
+  background-color: white;
+
+  nav {
+    width: 309px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  a {
+    border-bottom: 1px solid transparent;
+    margin-left: 57px;
+  }
+  a:hover {
+    border-bottom: 1px solid #ff6060;
+  }
+}
