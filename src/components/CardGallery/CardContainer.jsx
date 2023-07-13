@@ -7,7 +7,14 @@ export const CardsContainer = () => {
   return (
     <div className="container">
       {data.map((item) => {
-        return <Card key={item.id} image={item.cover} text={item.title} />;
+        return (
+          <Card
+            key={item.id}
+            id={item.id}
+            image={item.cover}
+            text={item.title}
+          />
+        );
       })}
     </div>
   );

@@ -14,11 +14,12 @@ header {
     display: flex;
     justify-content: flex-end;
   }
-  a {
+  .link {
     border-bottom: 1px solid transparent;
     margin-left: 57px;
   }
-  a:hover {
+  .activeLink {
     border-bottom: 1px solid #ff6060;
+    margin-left: 57px;
   }
 }

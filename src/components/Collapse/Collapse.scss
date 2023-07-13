@@ -1,0 +1,37 @@
+.collapse-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 45%;
+  background-color: #f6f6f6;
+  border: 1px solid blue;
+  margin: 0;
+  padding: 0;
+  color: #ff6060;
+  border-radius: 10px;
+
+  .header {
+    background-color: #ff6060;
+    color: white;
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+  }
+  img {
+    cursor: pointer;
+  }
+  .closedArrow {
+    transform: rotate(0.5turn);
+  }
+
+  .content {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 24px;
+    align-self: start;
+  }
+}
