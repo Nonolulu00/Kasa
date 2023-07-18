@@ -3,9 +3,8 @@ import ArrowBack from "../../Assets/icons/arrowBack.svg";
 import PropTypes from "prop-types";
 import "./Collapse.scss";
 
-export const CollapseMenu = ({ label, items }) => {
+export const CollapseMenu = ({ title, items }) => {
   const [isOpen, setIsOpen] = useState(false);
-
   function handleClick() {
     if (isOpen === false) {
       return setIsOpen(true);
@@ -16,7 +15,7 @@ export const CollapseMenu = ({ label, items }) => {
   return (
     <div className="collapse-container" open={isOpen}>
       <div className="header">
-        <h4>{label}</h4>
+        <h4>{title}</h4>
         {isOpen ? (
           <img src={ArrowBack} className="openedArrow" onClick={handleClick} />
         ) : (
@@ -27,15 +26,15 @@ export const CollapseMenu = ({ label, items }) => {
         className="content"
         style={isOpen ? { display: "flex" } : { display: "none" }}
       >
-        {items.map((item) => (
-          <h4 key={item}>{item}</h4>
-        ))}
+        {typeof items === "object" &&
+          items.map((item) => <h4 key={item}>{item}</h4>)}
+        {typeof items === "string" && <h4>{items}</h4>}
       </div>
     </div>
   );
 };
 
 CollapseMenu.propTypes = {
-  label: PropTypes.string.isrequired,
+  title: PropTypes.string.isrequired,
   items: PropTypes.array.isRequired,
 };

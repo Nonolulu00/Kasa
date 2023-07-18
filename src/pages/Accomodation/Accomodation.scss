@@ -1,0 +1,57 @@
+.description-container {
+  display: flex;
+  flex-direction: column;
+  color: #ff6060;
+  margin: 0px 100px;
+  gap: 24px;
+  margin-bottom: 50px;
+
+  .banner {
+    width: 100%;
+    align-self: center;
+    opacity: unset;
+  }
+
+  .details-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .host-info {
+    display: flex;
+    width: 20%;
+    align-items: center;
+    justify-content: center;
+    text-align: right;
+    gap: 8px;
+  }
+  .avatar {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: #c4c4c4;
+  }
+
+  .spec-container {
+    display: flex;
+    justify-content: space-between;
+    .tags-container {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .rating-container {
+      .star-icon {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+
+  .info-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+  }
+}
