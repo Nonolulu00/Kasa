@@ -4,7 +4,7 @@ import "../../styles/typography.scss";
 import jsondata from "../../logements.json";
 import { useParams } from "react-router-dom";
 import { Header } from "../../components/Header/Header";
-// import { Footer } from "../../components/Footer/Footer";
+import { Footer } from "../../components/Footer/Footer";
 import { Tag } from "../../components/Tags/Tag";
 import "./Accomodation.scss";
 import "../../styles/typography.scss";
@@ -19,6 +19,7 @@ export const Accomodation = () => {
     (accomodation) => accomodation.id === accomodationId.id
   );
   const accomodation = data[index];
+  console.log(accomodation.pictures);
 
   let totalStars = 5;
   let activeStars = parseInt(accomodation.rating);
@@ -70,7 +71,7 @@ export const Accomodation = () => {
           <CollapseMenu title="Équipements" items={accomodation.equipments} />
         </div>
       </div>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };
