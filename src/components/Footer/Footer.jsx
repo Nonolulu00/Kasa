@@ -5,7 +5,7 @@ export const Footer = () => {
   return (
     <div className="footer">
       <img src={BlackLogo} />
-      <h3>© 2020 Kasa. All rights reserved</h3>
+      <h4>© 2020 Kasa. All rights reserved</h4>
     </div>
   );
 };

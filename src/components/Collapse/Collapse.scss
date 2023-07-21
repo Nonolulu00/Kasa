@@ -3,8 +3,7 @@
   flex-direction: column;
   justify-content: flex-start;
   width: 45%;
-  background-color: #f6f6f6;
-  border: 1px solid blue;
+
   margin: 0;
   padding: 0;
   color: #ff6060;
@@ -26,12 +25,20 @@
     transform: rotate(0.5turn);
   }
 
+  .content-container {
+    background-color: #f6f6f6;
+    border-radius: 10px;
+  }
   .content {
     width: auto;
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin: 24px;
     align-self: start;
+    margin: 20px;
+  }
+
+  .hide {
+    display: none;
   }
 }
