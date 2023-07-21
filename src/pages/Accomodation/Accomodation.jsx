@@ -4,13 +4,13 @@ import "../../styles/typography.scss";
 import jsondata from "../../logements.json";
 import { useParams } from "react-router-dom";
 import { Header } from "../../components/Header/Header";
-import { Footer } from "../../components/Footer/Footer";
-import { Banner } from "../../components/Banner/Banner";
+// import { Footer } from "../../components/Footer/Footer";
 import { Tag } from "../../components/Tags/Tag";
 import "./Accomodation.scss";
 import "../../styles/typography.scss";
 import ActiveStar from "../../Assets/icons/star-active.svg";
 import InactiveStar from "../../Assets/icons/star-inactive.svg";
+import { Carousel } from "../../components/CardGallery/Carrousel/Carousel";
 
 export const Accomodation = () => {
   const data = jsondata;
@@ -19,8 +19,6 @@ export const Accomodation = () => {
     (accomodation) => accomodation.id === accomodationId.id
   );
   const accomodation = data[index];
-  console.log(typeof accomodation.description);
-  console.log(typeof accomodation.equipments);
 
   let totalStars = 5;
   let activeStars = parseInt(accomodation.rating);
@@ -29,7 +27,7 @@ export const Accomodation = () => {
     <>
       <Header />
       <div className="description-container">
-        <Banner image={accomodation.cover}></Banner>
+        <Carousel images={accomodation.pictures} />
         <div className="details-container">
           <div className="title-container">
             <h2>{accomodation.title}</h2>
@@ -68,14 +66,11 @@ export const Accomodation = () => {
           </div>
         </div>
         <div className="info-container">
-          <CollapseMenu
-            title={"Description"}
-            items={accomodation.description}
-          />
-          <CollapseMenu title={"Équipements"} items={accomodation.equipments} />
+          <CollapseMenu title="Description" items={accomodation.description} />
+          <CollapseMenu title="Équipements" items={accomodation.equipments} />
         </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };

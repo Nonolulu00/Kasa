@@ -1,34 +1,23 @@
-import { useState } from "react";
-import ArrowBack from "../../../Assets/icons/carrousel_arrow_back.svg";
-import ArrowForward from "../../../Assets/icons/carrousel_arrow_forward.svg";
-import { Banner } from "../../Banner/Banner";
+/* eslint-disable no-unused-vars */
+import PropTypes from "prop-types";
+import { useEffect, useState } from "react";
+import "./Carousel.scss";
+import ArrowBack from "../../../Assets/icons/arrow_back_slider.png";
+import ArrowForward from "../../../Assets/icons/arrow_forward_slider.png";
 
-export const Carousel = (items, totalPictures, index) => {
-  const [activeIndex, setActiveIndex] = useState(0);
-
-  const handleNext = () => {
-    setActiveIndex((prevIndex) => (prevIndex + 1) % items.length);
-  };
-  const handlePrev = () => {
-    setActiveIndex(
-      (prevIndex) => (prevIndex - 1 + items.length) % items.length
-    );
-  };
+export const Carousel = ({ images }) => {
+  const [indexSlide, setIndexSlide] = useState(0);
   return (
     <div className="carousel-container">
-      <div className="carousel-items">
-        {items.map((item, index) => {
-          <div className="image-container" key={index}>
-            <img src={item}></img>
-            {/* {activeIndex !== 0 && (
-
-              <ArrowBack>
-            )
-
-            } */}
-          </div>;
-        })}
+      <img src={images[indexSlide]}></img>
+      <div className="arrows-container">
+        <img className="arrow arrow-back" src={ArrowBack} />
+        <img className="arrow arrow-forward" src={ArrowForward} />
       </div>
     </div>
   );
+};
+
+Carousel.propTypes = {
+  images: PropTypes.array.isRequired,
 };
