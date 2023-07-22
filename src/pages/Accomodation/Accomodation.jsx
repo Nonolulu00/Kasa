@@ -3,14 +3,13 @@ import { CollapseMenu } from "../../components/Collapse/Collapse";
 import "../../styles/typography.scss";
 import jsondata from "../../logements.json";
 import { useParams } from "react-router-dom";
-import { Header } from "../../components/Header/Header";
-import { Footer } from "../../components/Footer/Footer";
 import { Tag } from "../../components/Tags/Tag";
 import "./Accomodation.scss";
 import "../../styles/typography.scss";
 import ActiveStar from "../../Assets/icons/star-active.svg";
 import InactiveStar from "../../Assets/icons/star-inactive.svg";
 import { Carousel } from "../../components/CardGallery/Carrousel/Carousel";
+import { Layout } from "../../components/Layout/Layout";
 
 export const Accomodation = () => {
   const data = jsondata;
@@ -25,8 +24,7 @@ export const Accomodation = () => {
   let activeStars = parseInt(accomodation.rating);
   let inactiveStars = totalStars - activeStars;
   return (
-    <>
-      <Header />
+    <Layout>
       <div className="description-container">
         <Carousel images={accomodation.pictures} />
         <div className="details-container">
@@ -71,7 +69,6 @@ export const Accomodation = () => {
           <CollapseMenu title="Équipements" items={accomodation.equipments} />
         </div>
       </div>
-      <Footer />
-    </>
+    </Layout>
   );
 };

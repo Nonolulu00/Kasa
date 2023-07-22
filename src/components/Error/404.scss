@@ -1,0 +1,14 @@
+.error-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 45px;
+  gap: 60px;
+  justify-content: space-between;
+  align-items: center;
+  color: #ff6060;
+
+  h1 {
+    font-size: 200px;
+    font-weight: 700;
+  }
+}

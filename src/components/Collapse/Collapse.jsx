@@ -19,20 +19,12 @@ export const CollapseMenu = ({ title, items }) => {
           : { backgroundColor: "transparent" }
       }
     >
-      <div className="header">
+      <div className="header" onClick={() => handleClick()}>
         <h4>{title}</h4>
         {isOpen ? (
-          <img
-            src={ArrowBack}
-            className="openedArrow"
-            onClick={() => handleClick()}
-          />
+          <img src={ArrowBack} className="openedArrow" />
         ) : (
-          <img
-            src={ArrowBack}
-            className="closedArrow"
-            onClick={() => handleClick()}
-          />
+          <img src={ArrowBack} className="closedArrow" />
         )}
       </div>
       <div className={open}>

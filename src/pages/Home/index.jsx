@@ -2,12 +2,11 @@ import "./App.css";
 import { Banner } from "../../components/Banner/Banner";
 import { CardsContainer } from "../../components/CardGallery/CardContainer";
 import Landscape from "../../Assets/images/Landscape.svg";
-import { Header } from "../../components/Header/Header";
-import { Footer } from "../../components/Footer/Footer";
+import { Layout } from "../../components/Layout/Layout";
+
 function App() {
   return (
-    <>
-      <Header />
+    <Layout>
       <div className="App">
         <Banner
           image={Landscape}
@@ -15,8 +14,7 @@ function App() {
         ></Banner>
         <CardsContainer />
       </div>
-      <Footer />
-    </>
+    </Layout>
   );
 }
 
