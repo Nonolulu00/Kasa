@@ -5,6 +5,7 @@ import "./styles/base.scss";
 import App from "./pages/Home";
 import { ErrorPage } from "./components/Error/404";
 import { Accomodation } from "./pages/Accomodation/Accomodation";
+import { About } from "./pages/About/About";
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,11 @@ const router = createBrowserRouter([
   {
     path: "/accomodation/:id",
     element: <Accomodation />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/about",
+    element: <About />,
     errorElement: <ErrorPage />,
   },
 ]);

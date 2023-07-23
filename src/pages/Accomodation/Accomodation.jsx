@@ -1,5 +1,5 @@
 /* eslint-disable indent */
-import { CollapseMenu } from "../../components/Collapse/Collapse";
+import { Collapse } from "../../components/Collapse/Collapse";
 import "../../styles/typography.scss";
 import jsondata from "../../logements.json";
 import { useParams } from "react-router-dom";
@@ -65,8 +65,16 @@ export const Accomodation = () => {
           </div>
         </div>
         <div className="info-container">
-          <CollapseMenu title="Description" items={accomodation.description} />
-          <CollapseMenu title="Équipements" items={accomodation.equipments} />
+          <Collapse
+            className="collapse"
+            title="Description"
+            items={accomodation.description}
+          />
+          <Collapse
+            className="collapse"
+            title="Équipements"
+            items={accomodation.equipments}
+          />
         </div>
       </div>
     </Layout>

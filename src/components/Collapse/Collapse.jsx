@@ -3,7 +3,7 @@ import { useState } from "react";
 import ArrowBack from "../../Assets/icons/arrowBack.svg";
 import "./Collapse.scss";
 
-export const CollapseMenu = ({ title, items }) => {
+export const Collapse = ({ title, items }) => {
   const [isOpen, setIsOpen] = useState(false);
   function handleClick() {
     setIsOpen(!isOpen);

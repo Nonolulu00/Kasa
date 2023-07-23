@@ -15,7 +15,7 @@ export const Header = () => {
           Accueil
         </NavLink>
         <NavLink
-          to={"/accommodations"}
+          to={"/about"}
           className={({ isActive }) => (isActive ? "activeLink" : "link")}
         >
           A propos
