@@ -1,10 +1,10 @@
 /* eslint-disable no-unused-vars */
 import PropTypes from "prop-types";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "./Carousel.scss";
-import ArrowBack from "../../../Assets/icons/arrow_back_slider.png";
-import ArrowForward from "../../../Assets/icons/arrow_forward_slider.png";
-import "../../../styles/typography.scss";
+import ArrowBack from "../../Assets/icons/arrow_back_slider.png";
+import ArrowForward from "../../Assets/icons/arrow_forward_slider.png";
+import "../../styles/typography.scss";
 
 export const Carousel = ({ images }) => {
   const [indexSlide, setIndexSlide] = useState(0);
@@ -21,7 +21,6 @@ export const Carousel = ({ images }) => {
     }
     setIndexSlide((prev) => prev - 1);
   };
-  console.log(indexSlide);
   return (
     <div className="carousel-container">
       <img className="accomodation-picture" src={images[indexSlide]}></img>

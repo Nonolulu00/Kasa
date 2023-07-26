@@ -1,6 +1,9 @@
+@import "/src/styles/variables";
+
 header {
   position: sticky;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   padding: 35px 100px;
@@ -9,17 +12,39 @@ header {
   top: 0;
   background-color: white;
 
+  @media screen and (max-width: $breakpoint-phones) {
+    padding: 20px;
+  }
+
   nav {
-    width: 309px;
+    width: 40%;
     display: flex;
     justify-content: flex-end;
+    flex: 1;
   }
   .link {
     border-bottom: 1px solid transparent;
     margin-left: 57px;
+
+    @media screen and (max-width: $breakpoint-phones) {
+      font-size: 12px;
+      text-transform: uppercase;
+    }
   }
   .activeLink {
-    border-bottom: 1px solid #ff6060;
+    border-bottom: 1px solid $primary-color;
     margin-left: 57px;
+
+    @media screen and (max-width: $breakpoint-phones) {
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+  }
+
+  img {
+    @media screen and (max-width: $breakpoint-phones) {
+      width: 145px;
+      height: 65px;
+    }
   }
 }

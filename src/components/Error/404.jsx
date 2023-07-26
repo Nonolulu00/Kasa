@@ -1,7 +1,5 @@
 import "../../styles/typography.scss";
 import "./404.scss";
-// import { Header } from "../Header/Header";
-// import { Footer } from "../Footer/Footer";
 import { NavLink } from "react-router-dom";
 import { Layout } from "../../components/Layout/Layout";
 

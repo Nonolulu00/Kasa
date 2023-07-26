@@ -1,11 +1,28 @@
+@import "/src/styles/variables";
+
+@media screen and (max-width: $breakpoint-phones) {
+  .banner {
+    height: 223px;
+  }
+  h4 {
+    font-size: 13px;
+  }
+  h5 {
+    font-size: 10px;
+  }
+  .accomodation-info {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 .values-container {
   display: flex;
   flex-direction: column;
   gap: 28px;
   padding: 0px 100px;
   margin-top: 30px;
-
-  .value {
-    width: 80%;
+  @media screen and (max-width: $breakpoint-phones) {
+    padding: 0px 20px;
   }
 }

@@ -6,7 +6,7 @@ import "../Header/Header.scss";
 export const Header = () => {
   return (
     <header>
-      <img src={RedLogo} />
+      <img className="red-logo" src={RedLogo} />
       <nav>
         <NavLink
           to={"/"}
