@@ -1,6 +1,7 @@
+@import "/src/styles/variables";
+
 .footer {
   position: sticky;
-  bottom: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,11 +9,14 @@
   left: 0;
   bottom: 0;
   width: 100%;
-  height: 12vh;
+  height: 10vh;
   background-color: black;
-  gap: 20px;
   z-index: 99;
 
+  @media screen and (max-width: $breakpoint-phones) {
+    padding: 20px 0;
+    gap: 10px;
+  }
   img {
     width: 100px;
     height: 40px;
@@ -20,5 +24,11 @@
 
   h4 {
     color: white;
+    @media screen and (max-width: $breakpoint-phones) {
+      font-size: 12px;
+      font-weight: lighter;
+      width: 30%;
+      text-align: center;
+    }
   }
 }

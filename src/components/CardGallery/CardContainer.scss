@@ -1,13 +1,21 @@
+@import "/src/styles/variables";
+
 .container {
   margin: 45px 100px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  // max-height: 800px;
   background-color: #f6f6f6;
-  // overflow: scroll;
   border-radius: 25px;
   padding: 45px 35px;
   gap: 60px;
+
+  @media screen and (max-width: $breakpoint-phones) {
+    margin: 20px 20px;
+    flex-direction: column;
+    background-color: transparent;
+    gap: 20px;
+    padding: 0;
+  }
 }

@@ -1,3 +1,5 @@
+@import "/src/styles/variables";
+
 .error-container {
   display: flex;
   flex-direction: column;
@@ -7,8 +9,18 @@
   align-items: center;
   color: #ff6060;
 
+  @media screen and (max-width: $breakpoint-phones) {
+    gap: 110px;
+
+    a {
+      font-size: 14px;
+    }
+  }
   h1 {
     font-size: 200px;
     font-weight: 700;
+    @media screen and (max-width: $breakpoint-phones) {
+      font-size: 96px;
+    }
   }
 }
