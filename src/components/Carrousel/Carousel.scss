@@ -6,6 +6,10 @@
   height: 40vh;
   transition: transform 0.3s ease;
 
+  @media screen and (max-width: $breakpoint-phones) {
+    height: 30vh;
+  }
+
   .accomodation-picture {
     position: absolute;
     width: 100%;

@@ -28,7 +28,7 @@ export const Carousel = ({ images }) => {
         <img className="arrow" src={ArrowBack} onClick={handlePrevious} />
         <img className="arrow" src={ArrowForward} onClick={handleNext} />
       </div>
-      <h4 className="count">{`${indexSlide + 1}/${images.length - 1}`}</h4>
+      <h4 className="count">{`${indexSlide + 1}/${images.length}`}</h4>
     </div>
   );
 };
