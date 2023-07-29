@@ -1,5 +1,3 @@
-/* eslint-disable no-unused-vars */
-import PropTypes from "prop-types";
 import { useState } from "react";
 import "./Carousel.scss";
 import ArrowBack from "../../Assets/icons/arrow_back_slider.png";
@@ -24,15 +22,15 @@ export const Carousel = ({ images }) => {
   return (
     <div className="carousel-container">
       <img className="accomodation-picture" src={images[indexSlide]}></img>
-      <div className="arrows-container">
-        <img className="arrow" src={ArrowBack} onClick={handlePrevious} />
-        <img className="arrow" src={ArrowForward} onClick={handleNext} />
-      </div>
-      <h4 className="count">{`${indexSlide + 1}/${images.length}`}</h4>
+      {images.length > 1 && (
+        <>
+          <div className="arrows-container">
+            <img className="arrow" src={ArrowBack} onClick={handlePrevious} />
+            <img className="arrow" src={ArrowForward} onClick={handleNext} />
+          </div>
+          <h4 className="count">{`${indexSlide + 1}/${images.length}`}</h4>
+        </>
+      )}
     </div>
   );
-};
-
-Carousel.propTypes = {
-  images: PropTypes.array.isRequired,
 };

@@ -41,7 +41,13 @@ export const Accomodation = () => {
             <div className="host-container">
               <div className="host-info">
                 <h4>{accomodation.host.name}</h4>
-                <div className="avatar"></div>
+                <div className="avatar">
+                  <img
+                    src={accomodation.host.picture}
+                    className="host-picture"
+                    alt="host picture"
+                  />
+                </div>
               </div>
               <div className="rating-container">
                 {[...Array(activeStars)].map((_star, index) => {
